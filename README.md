@@ -6,6 +6,9 @@
  Mod1 is an Arduino Nano based eurorack module designed by Hagiwo, that can be utilized with own code.
  Here you will find some slightly changed or completely new code ideas for this module. 
  
+ 
+ ![mod1](https://assets.st-note.com/production/uploads/images/166671260/rectangle_large_type_2_74d04b7593d4c5aa3a08d021646da297.jpeg) 
+ 
  # Mod1 LFO
  Insted of SawRevWave a random slope is used as 5th waveform. 
  SawRevWave is still in the code if you want to return to Hagiwos original code. 
