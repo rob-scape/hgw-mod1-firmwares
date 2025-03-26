@@ -16,6 +16,9 @@
 
  # randomwalk
 Random Walk with Gravity Mode. Button toggles between classic Random Walk mode and Gravity Mode.
+Rate, Bias/Offset, ChaosDepth can be controlled via pots and CV ins. 
+
+
 
 
  
