@@ -1,4 +1,4 @@
-# hgw-mod1-firmwares
+# **hgw-mod1-firmwares**
 
  Alternative firmwares for Hagiwos Mod1 Arduino based Module.
  https://note.com/solder_state/n/nc05d8e8fd311
@@ -10,11 +10,11 @@
  Insted of SawRevWave a random slope is used as 5th waveform. 
  SawRevWave is still in the code if you want to return to Hagiwos original code. 
  
- #3chan LFO
+ ##3chan LFO
  Added a fourth waveform: Random slope. 
  Selectable waveforms (Triangle, Square, Sine, Random Slope) chosen by a push button on D4 (INPUT_PULLUP).
 
- #randomwalk
+ ##randomwalk
 Random Walk with Gravity Mode. Button toggles between classic Random Walk mode and Gravity Mode.
 
 
