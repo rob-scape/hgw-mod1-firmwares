@@ -6,20 +6,20 @@
  Mod1 is an Arduino Nano based eurorack module designed by Hagiwo, that can be utilized with own code.
  Here you will find some slightly changed or completely new code ideas for this module. 
  
- #Mod1 LFO
+ # Mod1 LFO
  Insted of SawRevWave a random slope is used as 5th waveform. 
  SawRevWave is still in the code if you want to return to Hagiwos original code. 
  
- ##3chan LFO
+ # 3chan LFO
  Added a fourth waveform: Random slope. 
  Selectable waveforms (Triangle, Square, Sine, Random Slope) chosen by a push button on D4 (INPUT_PULLUP).
 
- ##randomwalk
+ # randomwalk
 Random Walk with Gravity Mode. Button toggles between classic Random Walk mode and Gravity Mode.
 
 
  
-  #mod1 general Hardware Configuration
+# mod1 general Hardware Configuration
 Potentiometers
 - Potentiometer 1  → A0
 - Potentiometer 2  → A1
