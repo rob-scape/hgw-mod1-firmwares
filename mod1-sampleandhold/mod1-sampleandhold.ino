@@ -65,25 +65,27 @@ void loop() {
         digitalWrite(LED_PIN, LOW);
     }
 
-    // Slew Calculation
-    int delta = heldValue - slewValue;
-    int step = constrain(abs(delta) / 10, 1, 20); // Step size based on difference
+// Slew Calculation
+int delta = heldValue - slewValue;
+int step = constrain(abs(delta) / 10, 1, 20); // Step size based on difference
 
-    // Adjust slewValue with steps
-    if (delta > 0) {
-        slewValue += step; // Increase if the target is greater
-    } else if (delta < 0) {
-        slewValue -= step; // Decrease if the target is smaller
-    }
+// Adjust slewValue with steps
+if (delta > 0) {
+    slewValue += step; // Increase if the target is greater
+} else if (delta < 0) {
+    slewValue -= step; // Decrease if the target is smaller
+}
 
-    // Low-pass filter implementation for smoothing
-    if (abs(slewValue - heldValue) < 10) { // Slightly increase the threshold
-        slewValue = (slewValue + heldValue) / 2; // Apply low-pass filter
-    }
+// Ensure that the output stops jittering after reaching the target
+if (abs(slewValue - heldValue) < 5) {
+    slewValue = heldValue; // Snap to the target value when close enough
+}
 
-    // Output the result to F3
-    analogWrite(F3_PIN, slewValue / 4); // Convert 10-bit to 8-bit PWM
-    delay(slewTime); // Use delay based on the time constant (for smooth transition)
+// Output the result to F3
+analogWrite(F3_PIN, slewValue / 4); // Convert 10-bit to 8-bit PWM
+delay(slewTime); // Use delay based on the time constant (for smooth transition)
+
+
 
     // Save current F1 state for next loop
     lastF1State = currentF1State;
