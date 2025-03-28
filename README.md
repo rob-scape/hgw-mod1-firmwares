@@ -26,8 +26,10 @@ Gravity Mode pulls the output slowly back to 0 over time. Rate, Bias/Offset, Cha
 Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button. Spike, jitter probability and spike length can be fine tuned in code.  I think i settled for nicely erratic not too random values in the spike mode.   
 
  # sample and hold with slew
- Classical sample and hold function. Sample and hold output on F4, if nothing is patched into sample input F2 an internal sample source is used. With pot 1 you can choose internal noise source.  
- Slewed output on F3, Pot 2 controls time constant of the slew. Button and F1 input are used as triggers. 
+ Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger in. 
+ If nothing is patched into sample input F2 an internal sample source is used. Pot1 is a bias for the internal noise. In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values. Pot3  is gain/level. 
+ Slewed output on F3 with Pot 2 controling time constant of the slew.
+ 
  To Do: Currently slewed output is very jittery, should be stabilized.   
  
 ## mod1 general Hardware Configuration

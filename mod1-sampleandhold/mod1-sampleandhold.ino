@@ -52,40 +52,49 @@ void loop() {
     // Slew Time Control
     int slewTime = map(analogRead(POT_SLEW), 0, 1023, 1, 50); // Adjust range as needed
 
+    // Read Potentiometer 1 (A0) to influence random value distribution
+    int pot1Value = analogRead(A0);
+    int potBias = map(pot1Value, 0, 1023, -500, 500); // Map pot value to range of -500 to +500
+
     // New Sample if Button Pressed or Rising Edge Trigger
     if ((buttonState && !lastButtonState) || trigger) {
         digitalWrite(LED_PIN, HIGH);
         if (externalSample) {
             heldValue = sampleInput * gain; // Use external input
         } else {
-            heldValue = random(1024) * gain; // Use random noise
+            // Generate random value influenced by Potentiometer 1
+            int randomValue = random(1024);
+            int biasedValue = randomValue + potBias;
+
+            // Clamp the biased value to the range 0 to 1023
+            biasedValue = constrain(biasedValue, 0, 1023);
+
+            heldValue = biasedValue * gain;
         }
         analogWrite(F4_PIN, heldValue / 4); // Convert 10-bit to 8-bit PWM
         delay(10);
         digitalWrite(LED_PIN, LOW);
     }
 
-// Slew Calculation
-int delta = heldValue - slewValue;
-int step = constrain(abs(delta) / 10, 1, 20); // Step size based on difference
+    // Slew Calculation
+    int delta = heldValue - slewValue;
+    int step = constrain(abs(delta) / 10, 1, 20); // Step size based on difference
 
-// Adjust slewValue with steps
-if (delta > 0) {
-    slewValue += step; // Increase if the target is greater
-} else if (delta < 0) {
-    slewValue -= step; // Decrease if the target is smaller
-}
+    // Adjust slewValue with steps
+    if (delta > 0) {
+        slewValue += step; // Increase if the target is greater
+    } else if (delta < 0) {
+        slewValue -= step; // Decrease if the target is smaller
+    }
 
-// Ensure that the output stops jittering after reaching the target
-if (abs(slewValue - heldValue) < 5) {
-    slewValue = heldValue; // Snap to the target value when close enough
-}
+    // Ensure that the output stops jittering after reaching the target
+    if (abs(slewValue - heldValue) < 5) {
+        slewValue = heldValue; // Snap to the target value when close enough
+    }
 
-// Output the result to F3
-analogWrite(F3_PIN, slewValue / 4); // Convert 10-bit to 8-bit PWM
-delay(slewTime); // Use delay based on the time constant (for smooth transition)
-
-
+    // Output the result to F3
+    analogWrite(F3_PIN, slewValue / 4); // Convert 10-bit to 8-bit PWM
+    delay(slewTime); // Use delay based on the time constant (for smooth transition)
 
     // Save current F1 state for next loop
     lastF1State = currentF1State;
