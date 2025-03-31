@@ -27,7 +27,6 @@ Gravity Mode pulls the output slowly back to 0 over time. Rate, Bias/Offset, Cha
 - Potentiometer 2 Bias/Offset 
 - Potentiometer 3 ChaosDepth 
 - Push Button  → switch mode
-
 Inputs/Outputs:
 - F1    A3  CV input / adds to Rate
 - F3    A5  CV input / adds to ChaosDepth 
