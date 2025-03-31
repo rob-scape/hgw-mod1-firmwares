@@ -34,7 +34,6 @@ Inputs/Outputs:
 
  # bezier curve with spike/ jitter mode
 Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button. Spike, jitter probability and spike length can be fine tuned in code.  I think i settled for nicely erratic not too random values in the spike mode.   
-Potentiometers
 - Potentiometer 1 → A0 freq
 - Potentiometer 2 → A1 curve
 - Potentiometer 3 → A2 dev
@@ -53,8 +52,6 @@ Inputs/Outputs:
  Slewed output on F3 with Pot 2 controling time constant of the slew.
  
  To Do: Currently slewed output is very jittery, should be stabilized.   
- 
- Potentiometers
  - Potentiometer 1 → A0 noise bias
  - Potentiometer 2 → A1 time constant slew
  - Potentiometer 3 → A2 gain
