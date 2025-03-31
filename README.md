@@ -111,7 +111,7 @@ In Bernoulli Mode, the button has no effect.
 LED Indicator (D3)
 Flashes on every valid trigger output (either F3 or F4).
 
-This combination of probability control, step sequencing, trigger skipping, and glitch bursts makes the module highly versatile for generative rhythms, random variations, and chaotic textures. 
+This combination of probability control, step sequencing, trigger skipping, and glitch bursts makes the module versatile for generative rhythms, random variations, and chaotic textures. 
 
  
  
