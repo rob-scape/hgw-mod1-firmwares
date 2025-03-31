@@ -22,10 +22,15 @@
 
  # randomwalk
 Random Walk with Gravity Mode. Button toggles between classic Random Walk mode and Gravity Mode.
-Gravity Mode pulls the output slowly back to 0 over time. Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth . 
-- Potentiometer 1 Rate    
-- Potentiometer 2 Bias/Offset 
-- Potentiometer 3 ChaosDepth 
+Gravity Mode pulls the output slowly back to 0 over time. Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.
+ Slow, evolving CV signals, offering both chaotic and stabilized output behaviors. 
+
+- Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.
+- Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.
+
+- Potentiometer 1 Rate / Control the frequency of random steps.    
+- Potentiometer 2 Bias/Offset /Shifts the output up or down.
+- Potentiometer 3 ChaosDepth (step size of walk) / Adjust the step size from subtle drifts to wild jumps.
 - Push Button  → switch mode
 Inputs/Outputs:
 - F1    A3  CV input / adds to Rate
