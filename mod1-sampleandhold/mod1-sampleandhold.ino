@@ -1,3 +1,26 @@
+/*
+// Sample and Hold with Slew for Hagiwos Mod1 by Rob Heel.
+ Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger in. 
+ If nothing is patched into sample input F2 an internal sample source is used. 
+ Pot1 is a bias for the internal noise. In the middle position truly random, fully clockwise shifts towards higher values, 
+ fully counter clockwise shifts towards lower values. Pot3  is gain/level. 
+ Slewed output on F3 with Pot 2 controling time constant of the slew.
+
+Potentiometers
+    Potentiometer 1 → A0 noise bias
+    Potentiometer 2 → A1 time constant slew
+    Potentiometer 3 → A2 gain
+Inputs/Outputs:
+    F1 → A3 trigger in
+    F2 → A4 sample input
+    F3 → A5 slew output
+    F4 → D11 sample and hold output
+    LED → Pin 3
+    Button → Pin 4 trigger
+
+*/
+
+
 #include <Arduino.h>
 
 // Pin Definitions
