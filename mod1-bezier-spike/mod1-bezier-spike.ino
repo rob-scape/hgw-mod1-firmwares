@@ -10,7 +10,7 @@ Inputs/Outputs:
     F3 → A5 dev CV in
     F4 → D11 output
     LED → Pin 3
-    Button → Pin 4
+    Button → Pin 4 switch modes
 
 */
 
