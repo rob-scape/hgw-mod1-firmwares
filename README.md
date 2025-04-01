@@ -119,7 +119,7 @@ This combination of probability control, step sequencing, trigger skipping, and 
  
  
  
-## mod1 general Hardware Configuration
+# mod1 general Hardware Configuration
 Potentiometers
 - Potentiometer 1  → A0
 - Potentiometer 2  → A1
