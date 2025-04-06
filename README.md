@@ -72,7 +72,7 @@ Inputs/Outputs:
 This firmware combines a probabilistic Bernoulli gate with a step sequencer, providing flexible trigger manipulation and glitchy bursts for
 randomness, controlled probabilities, and rhythmic chaos.
 
-Controls:
+Controls: </br></br>
 Pot 1 (Probability - A0)
 Sets the probability of switching between the two outputs (F3 and F4).
 Fully counterclockwise: Always output F3.
