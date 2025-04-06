@@ -94,7 +94,7 @@ Fully counterclockwise: No triggers are missed.
 Turn clockwise: Up to 35% of triggers are missed. Linear 0-35%.
 80-100% (CW): Introduces Glitch Bursts, where rapid chaotic trigger sequences are generated occasionally.
 
-Inputs and Outputs:
+Inputs and Outputs:  </br></br>
 F1 (Trigger Input - A3)
 Incoming trigger signal to be processed through the Bernoulli gate or sequencer.
 F2 (CV Input - A4)
