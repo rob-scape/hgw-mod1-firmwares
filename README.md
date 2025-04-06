@@ -72,14 +72,14 @@ Inputs/Outputs:
 This firmware combines a probabilistic Bernoulli gate with a step sequencer, providing flexible trigger manipulation and glitchy bursts for
 randomness, controlled probabilities, and rhythmic chaos.
 
-## Controls:
-## Pot 1 (Probability - A0)
+Controls:
+Pot 1 (Probability - A0)
 Sets the probability of switching between the two outputs (F3 and F4).
 Fully counterclockwise: Always output F3.
 Fully clockwise: Always output F4.
 Intermediate positions introduce a random chance of either output based on the pot setting.
 
-## Pot 2 (Mode/Length - A1)
+Pot 2 (Mode/Length - A1)
 Selects between Bernoulli Mode and Step Sequence Modes:
 0-20% (CCW): Bernoulli Mode (random coin toss per trigger)
 20-40%: 4-Step Sequence
@@ -88,17 +88,17 @@ Selects between Bernoulli Mode and Step Sequence Modes:
 80-100% (CW): 32-Step Sequence
 In Step Sequence Modes, pressing the button generates a new randomized sequence.
 
-## Pot 3 (Miss Probability and Glitch Burst - A2)
+Pot 3 (Miss Probability and Glitch Burst - A2)
 Sets the probability of skipping triggers:
 Fully counterclockwise: No triggers are missed.
 Turn clockwise: Up to 35% of triggers are missed. Linear 0-35%.
 80-100% (CW): Introduces Glitch Bursts, where rapid chaotic trigger sequences are generated occasionally.
 
-## Inputs and Outputs:
+Inputs and Outputs:
 F1 (Trigger Input - A3)
 Incoming trigger signal to be processed through the Bernoulli gate or sequencer.
 F2 (CV Input - A4)
-Modulates the output probability in conjunction with Pot 1, allowing CV control.
+Modulates the output probability in conjunction with Pot 1, allowing CV control, 0-5 V.
 F3 (Output 1 - D10)
 One of the two output trigger channels, chosen based on the current probability setting.
 F4 (Output 2 - D11)
