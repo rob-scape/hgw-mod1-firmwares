@@ -98,7 +98,7 @@ Inputs and Outputs:
 F1 (Trigger Input - A3)
 Incoming trigger signal to be processed through the Bernoulli gate or sequencer.
 F2 (CV Input - A4)
-Modulates the output probability in conjunction with Pot 1, allowing CV control, 0-5 V.
+Modulates the output probability in conjunction with Pot 1, allowing CV control.
 F3 (Output 1 - D10)
 One of the two output trigger channels, chosen based on the current probability setting.
 F4 (Output 2 - D11)
