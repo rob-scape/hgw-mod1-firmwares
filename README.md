@@ -112,9 +112,27 @@ LED Indicator (D3)
 Flashes on every valid trigger output (either F3 or F4).
 
 This combination of probability control, step sequencing, trigger skipping, and glitch bursts makes the module versatile for generative rhythms, random variations, and chaotic textures. 
+ 
+ 
+# pot1 recorder 
 
- 
- 
+Pot1 Recorder with Fast PWM Output (100 Hz S&H style) max recording time 7.5 sec. 
+S&H style recording and playback in order to squeeze out a useful recording time of the nano’s small SRAM. 
+You can record movement of pot1 while holding down the button. Once let go it will loop the recording. Pot2 is speed, from half to double speed. 
+Pot3 is gain control. 
+Speed CV offset via F1 CV in.  Gain CV offset via F2 CV in. 
+CV out on F4. 
+
+- Potentiometer 1 -> Pot to record
+- Potentiometer 2 -> Speed control of recording
+- Potentiometer 3 -> Output gain
+- F1 -> Speed offset CV in 0-5 V
+- F2 -> Gain offset CV in 0-5 V
+- F3 -> /
+- F4 -> Output
+- LED -> Visualize Output
+- Button -> Recording button
+
  
  
  
