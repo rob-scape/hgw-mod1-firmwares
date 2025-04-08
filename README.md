@@ -9,6 +9,15 @@
  
  ![mod1](https://assets.st-note.com/production/uploads/images/166671260/rectangle_large_type_2_74d04b7593d4c5aa3a08d021646da297.jpeg) 
  
+  # Current firmwares
+ - Mod1 LFO
+- 3chan LFO
+- randomwalk
+- bezier curve with spike/ jitter mode
+- sample and hold with slew
+- Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts
+- pot1 recorder 
+  
  # Mod1 LFO
  Multi waveform LFO.
  Insted of SawRevWave a random slope is used as 5th waveform. 
