@@ -115,6 +115,9 @@ In Step Sequence Modes, pressing the button generates a new randomized sequence.
 
 With pot3 you can introduce Miss Probability and Glitch Bursts.
 
+
+This combination of probability control, step sequencing, trigger skipping, and glitch bursts makes the module versatile for generative rhythms, random variations, and chaotic textures. 
+
 Controls:\
 Pot 1 Probability\
 Sets the probability of switching between the two outputs (F3 and F4).
@@ -154,9 +157,7 @@ In Bernoulli Mode, the button has no effect.
 LED Indicator\
 Flashes on every valid trigger output (either F3 or F4).
 
-This combination of probability control, step sequencing, trigger skipping, and glitch bursts makes the module versatile for generative rhythms, random variations, and chaotic textures. 
- 
- 
+  
 # pot1 recorder 
 
 Pot1 Recorder with Fast PWM Output (100 Hz S&H style) max recording time 7.5 sec.\
