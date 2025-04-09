@@ -70,7 +70,7 @@ Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-center
 - F4 → Random Walk Output
 
  # bezier curve with spike/ jitter mode
-Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.\ 
+Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.\
 Spike, jitter probability and spike length can be fine tuned in code.  I think i settled for nicely erratic not too random values in the spike mode.   
 
 - Pot1 → freq
@@ -85,12 +85,12 @@ Spike, jitter probability and spike length can be fine tuned in code.  I think i
 
 
  # sample and hold with slew
- Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger in.\ 
- If nothing is patched into sample input F2 an internal sample source is used.\ 
+ Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger in.\
+ If nothing is patched into sample input F2 an internal sample source is used.\
  Pot1 is a bias for the internal noise.\
  In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values.\
  Pot3  is gain/level.\
- Slewed output on F3 with Pot 2 controling time constant of the slew.
+ Slewed output on F3 with Pot 2 controling time constant of the slew, up to 1000 ms slew.
  
  - Pot1 → A0 noise bias
  - Pot2 → A1 time constant slew
