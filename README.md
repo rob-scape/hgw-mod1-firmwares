@@ -24,25 +24,47 @@
  SawRevWave is still in the code if you want to return to Hagiwos original code.\
  Sine, Triangle, Square, Saw, Random Slope, MaxTable waveforms.  
  
+- POT1  A0  frequency
+- POT2  A1  waveform select
+- POT3  A2  output level
+- F1    A3  frequency CV in
+- F2    A4  waveform CV in
+- F3    A5  output level CV in
+- F4    D11 output
+- BUTTON    change frequency range
+- LED       output
+- EEPROM    Saves the frequency range when the button is pressed
+ 
  # 3chan LFO
  Three channel LFO.\
  Added a fourth waveform: Random slope. 
- Selectable waveforms (Triangle, Square, Sine, Random Slope) chosen by a push button on D4.
+ Selectable waveforms: Triangle, Square, Sine, Random Slope chosen by a push button on D4.
+ 
+- POT1  A0  LFO1 frequency
+- POT2  A1  LFO2 frequency
+- POT3  A2  LFO3 frequency
+- F1    A3  frequency CV in (apply all ch LFO freq)
+- F2    A4  LFO1 output
+- F3    A5  LFO2 output
+- F4    D11 LFO3 output
+- BUTTON    change waveform
+- LED       LFO1 output
+- EEPROM    Saves select waveform
 
  # randomwalk
 Random Walk with Gravity Mode.\
 Button toggles between classic Random Walk mode and Gravity Mode.\
-Gravity Mode pulls the output slowly back to 0 over time. Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.\
+Gravity Mode pulls the output slowly back to 0 over time.\
+Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.\
 Slow, evolving CV signals, offering both chaotic and stabilized output behaviors. 
 
-- Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.
-- Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.
+- Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.\
+- Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.\
 
-- Potentiometer 1 Rate / Control the frequency of random steps.    
-- Potentiometer 2 Bias/Offset /Shifts the output up or down.
-- Potentiometer 3 ChaosDepth (step size of walk) / Adjust the step size from subtle drifts to wild jumps.
-- Push Button  → switch mode
-Inputs/Outputs:
+- Pot1 Rate / Control the frequency of random steps.    
+- Pot2 Bias/Offset /Shifts the output up or down.
+- Pot3 ChaosDepth (step size of walk) / Adjust the step size from subtle drifts to wild jumps.
+- Button  → switch mode
 - F1    A3  CV input / adds to Rate
 - F3    A5  CV input / adds to ChaosDepth 
 - F4    D11 Random Walk Output
