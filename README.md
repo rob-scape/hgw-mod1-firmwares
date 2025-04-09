@@ -22,34 +22,34 @@
  Multi waveform LFO.\
  Instead of SawRevWave a random slope is used as 5th waveform. 
  SawRevWave is still in the code if you want to return to Hagiwos original code.\
- Sine, Triangle, Square, Saw, Random Slope, MaxTable waveforms.  
+ Selectable waveforms: Sine, Triangle, Square, Saw, Random Slope, MaxTable waveforms.  
  
-- POT1  A0  frequency
-- POT2  A1  waveform select
-- POT3  A2  output level
-- F1    A3  frequency CV in
-- F2    A4  waveform CV in
-- F3    A5  output level CV in
-- F4    D11 output
-- BUTTON    change frequency range
-- LED       output
-- EEPROM    Saves the frequency range when the button is pressed
+- POT1 →frequency
+- POT2 → waveform select
+- POT3 → output level
+- F1 → frequency CV in
+- F2 → waveform CV in
+- F3 → output level CV in
+- F4 → output
+- BUTTON → change frequency range
+- LED → output
+- EEPROM → Saves the frequency range when the button is pressed
  
  # 3chan LFO
  Three channel LFO.\
- Added a fourth waveform: Random slope. 
+ Added a fourth waveform: Random slope.\
  Selectable waveforms: Triangle, Square, Sine, Random Slope chosen by a push button on D4.
  
-- POT1  A0  LFO1 frequency
-- POT2  A1  LFO2 frequency
-- POT3  A2  LFO3 frequency
-- F1    A3  frequency CV in (apply all ch LFO freq)
-- F2    A4  LFO1 output
-- F3    A5  LFO2 output
-- F4    D11 LFO3 output
-- BUTTON    change waveform
-- LED       LFO1 output
-- EEPROM    Saves select waveform
+- POT1 → LFO1 frequency
+- POT2 → LFO2 frequency
+- POT3 → LFO3 frequency
+- F1 → frequency CV in (apply to all ch LFO freq)
+- F2 → LFO1 output
+- F3 → LFO2 output
+- F4 → LFO3 output
+- BUTTON → change waveform
+- LED → LFO1 output
+- EEPROM → Saves select waveform
 
  # randomwalk
 Random Walk with Gravity Mode.\
@@ -61,27 +61,27 @@ Slow, evolving CV signals, offering both chaotic and stabilized output behaviors
 - Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.\
 - Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.\
 
-- Pot1 Rate / Control the frequency of random steps.    
-- Pot2 Bias/Offset /Shifts the output up or down.
-- Pot3 ChaosDepth (step size of walk) / Adjust the step size from subtle drifts to wild jumps.
-- Button  → switch mode
-- F1    A3  CV input / adds to Rate
-- F3    A5  CV input / adds to ChaosDepth 
-- F4    D11 Random Walk Output
+- Pot1 → Rate / Control the frequency of random steps.    
+- Pot2 → Bias/Offset /Shifts the output up or down.
+- Pot3 → ChaosDepth (step size of walk) / Adjust the step size from subtle drifts to wild jumps.
+- Button → switch mode
+- F1 → CV input / adds to Rate
+- F3 → CV input / adds to ChaosDepth 
+- F4 → Random Walk Output
 
  # bezier curve with spike/ jitter mode
 Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.\ 
 Spike, jitter probability and spike length can be fine tuned in code.  I think i settled for nicely erratic not too random values in the spike mode.   
-- Potentiometer 1 → A0 freq
-- Potentiometer 2 → A1 curve
-- Potentiometer 3 → A2 dev
-Inputs/Outputs:
-- F1 → A3 freq CV in
-- F2 → A4 curve CV in
-- F3 → A5 dev CV in
-- F4 → D11 output
+
+- Pot1 → freq
+- Pot2 → curve
+- Pot3 → dev
+- F1 → freq CV in
+- F2 → curve CV in
+- F3 → dev CV in
+- F4 → output
 - LED → Pin 3
-- Button → Pin 4 switch modes
+- Button → switch modes
 
 
  # sample and hold with slew
@@ -92,10 +92,9 @@ Inputs/Outputs:
  Pot3  is gain/level.\
  Slewed output on F3 with Pot 2 controling time constant of the slew.
  
- - Potentiometer 1 → A0 noise bias
- - Potentiometer 2 → A1 time constant slew
- - Potentiometer 3 → A2 gain
-
+ - Pot1 → A0 noise bias
+ - Pot2 → A1 time constant slew
+ - Pot3 → A2 gain
 -  F1 → A3 trigger in
 -  F2 → A4 sample input
 -  F3 → A5 slew output
@@ -159,15 +158,15 @@ Pot3 is gain control.\
 Speed CV offset via F1 CV in.  Gain CV offset via F2 CV in.\
 CV out on F4. 
 
-- Potentiometer 1 -> Pot to record
-- Potentiometer 2 -> Speed control of recording
-- Potentiometer 3 -> Output gain
-- F1 -> Speed offset CV in 0-5 V
-- F2 -> Gain offset CV in 0-5 V
-- F3 -> /
-- F4 -> Output
-- LED -> Visualize Output
-- Button -> Recording button
+- Pot1 → Pot to record
+- Pot2 → Speed control of recording
+- Pot3 → Output gain
+- F1 → Speed offset CV in 0-5 V
+- F2 → Gain offset CV in 0-5 V
+- F3 → /
+- F4 → Output
+- LED → Visualize Output
+- Button → Recording button
 
  
  
@@ -175,9 +174,9 @@ CV out on F4.
  
 # mod1 general Hardware Configuration
 Potentiometers
-- Potentiometer 1  → A0
-- Potentiometer 2  → A1
-- Potentiometer 3  → A2
+- Pot1  → A0
+- Pot2  → A1
+- Pot3  → A2
 
 Inputs/Outputs:
 - F1    → A3/ D17  in/output
