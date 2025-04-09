@@ -58,8 +58,8 @@ Gravity Mode pulls the output slowly back to 0 over time.\
 Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.\
 Slow, evolving CV signals, offering both chaotic and stabilized output behaviors. 
 
-- Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.
-- Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.
+Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.\
+Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.\
 
 - Pot1 → Rate / Control the frequency of random steps.    
 - Pot2 → Bias/Offset /Shifts the output up or down.
