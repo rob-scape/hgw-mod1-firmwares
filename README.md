@@ -129,14 +129,14 @@ Turn clockwise: Up to 35% of triggers are missed. Linear 0-35%.
 80-100% (CW): Introduces Glitch Bursts, where rapid chaotic trigger sequences are generated occasionally.
 
 Inputs and Outputs:\
-F1 Trigger Input
-Incoming trigger signal to be processed through the Bernoulli gate or sequencer.
-F2 CV Input
-Modulates the output probability in conjunction with Pot 1, allowing CV control.
-F3 Output 1
-One of the two output trigger channels, chosen based on the current probability setting.
-F4 Output 2
-The second output trigger channel, acting as a counterpart to F3.
+F1 Trigger Input\
+Incoming trigger signal to be processed through the Bernoulli gate or sequencer.\
+F2 CV Input\
+Modulates the output probability in conjunction with Pot 1, allowing CV control.\
+F3 Output 1\
+One of the two output trigger channels, chosen based on the current probability setting.\
+F4 Output 2\
+The second output trigger channel, acting as a counterpart to F3.\
 
 Button\
 Pressing the button in Sequence Mode regenerates the step sequence with a new randomized pattern.
