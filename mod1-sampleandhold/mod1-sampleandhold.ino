@@ -53,8 +53,12 @@ void setup() {
     TCCR2B = _BV(CS21); // Prescaler 8
 
     // Set up PWM on D10 (F3) - Fast PWM
-    TCCR1A = _BV(COM1A1) | _BV(WGM10) | _BV(WGM11); // Fast PWM
-    TCCR1B = _BV(CS11); // Prescaler 8
+    //TCCR1A = _BV(COM1A1) | _BV(WGM10) | _BV(WGM11); // Fast PWM
+   // TCCR1B = _BV(CS11); // Prescaler 8
+
+    TCCR1A = _BV(COM1A1) | _BV(WGM10);        // Enable PWM on OC1A (D10), WGM10 for 8-bit
+TCCR1B = _BV(WGM12) | _BV(CS11);          // Fast PWM 8-bit, prescaler 8
+
 }
 
 void loop() {
@@ -62,7 +66,8 @@ void loop() {
     buttonState = digitalRead(BUTTON_PIN) == LOW;
     
     // Read External Trigger (F1) - Rising edge detection
-    bool currentF1State = analogRead(F1_PIN) > 512;  // Consider above 2.5V as "high"
+    //bool currentF1State = analogRead(F1_PIN) > 512;  // Consider above 2.5V as "high" 512
+    bool currentF1State = digitalRead(F1_PIN); // digital read as trigger detect
     bool trigger = (currentF1State && !lastF1State);  // Rising edge detected
 
     // Check Sample Input
@@ -99,25 +104,56 @@ void loop() {
         digitalWrite(LED_PIN, LOW);
     }
 
-    // Slew Calculation
-    int delta = heldValue - slewValue;
-    int step = constrain(abs(delta) / 10, 1, 20); // Step size based on difference
 
-    // Adjust slewValue with steps
-    if (delta > 0) {
-        slewValue += step; // Increase if the target is greater
-    } else if (delta < 0) {
-        slewValue -= step; // Decrease if the target is smaller
+// Slew Calculation
+static unsigned long slewStartTimeMicros = 0;
+static int startValue = 0;
+static int targetValue = 0;
+static int slewDurationMicros = 0;
+static bool slewing = false;
+
+static unsigned long lastStepTime = 0;
+static int steps = 1;
+static float stepSize = 0;
+static float intermediateValue = 0;
+
+// Slew time from Pot2
+int rawPot = analogRead(POT_SLEW);
+float curved = pow((float)rawPot / 1023.0, 2.5); // Optional: exponential response
+int currentSlewTime = constrain(curved * 1000, 10, 1000); // 10–1000ms
+int totalTimeMicros = currentSlewTime * 1000;
+
+// Start new slew
+if (heldValue != targetValue) {
+    startValue = slewValue;
+    targetValue = heldValue;
+    slewDurationMicros = totalTimeMicros;
+    steps = max(1, currentSlewTime * 2); // 2 steps per ms = 0.5ms per step
+    stepSize = (float)(targetValue - startValue) / steps;
+    intermediateValue = startValue;
+    slewStartTimeMicros = micros();
+    lastStepTime = micros();
+    slewing = true;
+}
+
+if (slewing) {
+    unsigned long now = micros();
+    if (now - lastStepTime >= 500) { // 0.5ms per step
+        intermediateValue += stepSize;
+        slewValue = round(intermediateValue);
+        lastStepTime = now;
+
+        if ((stepSize > 0 && slewValue >= targetValue) ||
+            (stepSize < 0 && slewValue <= targetValue)) {
+            slewValue = targetValue;
+            slewing = false;
+        }
     }
+}
 
-    // Ensure that the output stops jittering after reaching the target
-    if (abs(slewValue - heldValue) < 5) {
-        slewValue = heldValue; // Snap to the target value when close enough
-    }
+// Output to F3
+analogWrite(F3_PIN, slewValue / 4); // 10-bit to 8-bit PWM
 
-    // Output the result to F3
-    analogWrite(F3_PIN, slewValue / 4); // Convert 10-bit to 8-bit PWM
-    delay(slewTime); // Use delay based on the time constant (for smooth transition)
 
     // Save current F1 state for next loop
     lastF1State = currentF1State;

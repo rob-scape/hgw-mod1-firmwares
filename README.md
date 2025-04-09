@@ -19,20 +19,21 @@
 - pot1 recorder 
   
  # Mod1 LFO
- Multi waveform LFO.
+ Multi waveform LFO.\
  Insted of SawRevWave a random slope is used as 5th waveform. 
  SawRevWave is still in the code if you want to return to Hagiwos original code. 
  Sine, Triangle, Square, Saw, Random Slope, MaxTable waveforms.  
  
  # 3chan LFO
- Three channel LFO.
+ Three channel LFO.\
  Added a fourth waveform: Random slope. 
  Selectable waveforms (Triangle, Square, Sine, Random Slope) chosen by a push button on D4.
 
  # randomwalk
-Random Walk with Gravity Mode. Button toggles between classic Random Walk mode and Gravity Mode.
-Gravity Mode pulls the output slowly back to 0 over time. Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.
- Slow, evolving CV signals, offering both chaotic and stabilized output behaviors. 
+Random Walk with Gravity Mode.\
+Button toggles between classic Random Walk mode and Gravity Mode.\
+Gravity Mode pulls the output slowly back to 0 over time. Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.\
+Slow, evolving CV signals, offering both chaotic and stabilized output behaviors. 
 
 - Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.
 - Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.
@@ -47,7 +48,8 @@ Inputs/Outputs:
 - F4    D11 Random Walk Output
 
  # bezier curve with spike/ jitter mode
-Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button. Spike, jitter probability and spike length can be fine tuned in code.  I think i settled for nicely erratic not too random values in the spike mode.   
+Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.\ 
+Spike, jitter probability and spike length can be fine tuned in code.  I think i settled for nicely erratic not too random values in the spike mode.   
 - Potentiometer 1 → A0 freq
 - Potentiometer 2 → A1 curve
 - Potentiometer 3 → A2 dev
@@ -61,15 +63,17 @@ Inputs/Outputs:
 
 
  # sample and hold with slew
- Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger in. 
- If nothing is patched into sample input F2 an internal sample source is used. Pot1 is a bias for the internal noise. In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values. Pot3  is gain/level. 
+ Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger in.\ 
+ If nothing is patched into sample input F2 an internal sample source is used.\ 
+ Pot1 is a bias for the internal noise.\
+ In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values.\
+ Pot3  is gain/level.\
  Slewed output on F3 with Pot 2 controling time constant of the slew.
  
- To Do: Currently slewed output is very jittery, should be stabilized.   
  - Potentiometer 1 → A0 noise bias
  - Potentiometer 2 → A1 time constant slew
  - Potentiometer 3 → A2 gain
-Inputs/Outputs:
+
 -  F1 → A3 trigger in
 -  F2 → A4 sample input
 -  F3 → A5 slew output
@@ -81,14 +85,14 @@ Inputs/Outputs:
 This firmware combines a probabilistic Bernoulli gate with a step sequencer, providing flexible trigger manipulation and glitchy bursts for
 randomness, controlled probabilities, and rhythmic chaos.
 
-Controls: </br></br>
-Pot 1 (Probability - A0)
+Controls:\
+Pot 1 Probability
 Sets the probability of switching between the two outputs (F3 and F4).
 Fully counterclockwise: Always output F3.
 Fully clockwise: Always output F4.
 Intermediate positions introduce a random chance of either output based on the pot setting.
 
-Pot 2 (Mode/Length - A1)
+Pot 2 Mode/Length
 Selects between Bernoulli Mode and Step Sequence Modes:
 0-20% (CCW): Bernoulli Mode (random coin toss per trigger)
 20-40%: 4-Step Sequence
@@ -97,27 +101,27 @@ Selects between Bernoulli Mode and Step Sequence Modes:
 80-100% (CW): 32-Step Sequence
 In Step Sequence Modes, pressing the button generates a new randomized sequence.
 
-Pot 3 (Miss Probability and Glitch Burst - A2)
+Pot 3 Miss Probability and Glitch Burst
 Sets the probability of skipping triggers:
 Fully counterclockwise: No triggers are missed.
 Turn clockwise: Up to 35% of triggers are missed. Linear 0-35%.
 80-100% (CW): Introduces Glitch Bursts, where rapid chaotic trigger sequences are generated occasionally.
 
-Inputs and Outputs:  </br></br>
-F1 (Trigger Input - A3)
+Inputs and Outputs:\
+F1 Trigger Input
 Incoming trigger signal to be processed through the Bernoulli gate or sequencer.
-F2 (CV Input - A4)
+F2 CV Input
 Modulates the output probability in conjunction with Pot 1, allowing CV control.
-F3 (Output 1 - D10)
+F3 Output 1
 One of the two output trigger channels, chosen based on the current probability setting.
-F4 (Output 2 - D11)
+F4 Output 2
 The second output trigger channel, acting as a counterpart to F3.
 
-Button (D4)
+Button
 Pressing the button in Sequence Mode regenerates the step sequence with a new randomized pattern.
 In Bernoulli Mode, the button has no effect.
 
-LED Indicator (D3)
+LED Indicator
 Flashes on every valid trigger output (either F3 or F4).
 
 This combination of probability control, step sequencing, trigger skipping, and glitch bursts makes the module versatile for generative rhythms, random variations, and chaotic textures. 
@@ -125,11 +129,12 @@ This combination of probability control, step sequencing, trigger skipping, and 
  
 # pot1 recorder 
 
-Pot1 Recorder with Fast PWM Output (100 Hz S&H style) max recording time 7.5 sec. 
-S&H style recording and playback in order to squeeze out a useful recording time of the nano’s small SRAM. 
-You can record movement of pot1 while holding down the button. Once let go it will loop the recording. Pot2 is speed, from half to double speed. 
-Pot3 is gain control. 
-Speed CV offset via F1 CV in.  Gain CV offset via F2 CV in. 
+Pot1 Recorder with Fast PWM Output (100 Hz S&H style) max recording time 7.5 sec.\ 
+S&H style recording and playback in order to squeeze out a useful recording time of the nano’s small SRAM.\ 
+You can record movement of pot1 while holding down the button. Once let go it will loop the recording.\ 
+Pot2 is speed, from half to double speed.\
+Pot3 is gain control.\ 
+Speed CV offset via F1 CV in.  Gain CV offset via F2 CV in.\
 CV out on F4. 
 
 - Potentiometer 1 -> Pot to record
