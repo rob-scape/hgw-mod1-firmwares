@@ -24,7 +24,7 @@
  SawRevWave is still in the code if you want to return to Hagiwos original code.\
  Selectable waveforms: Sine, Triangle, Square, Saw, Random Slope, MaxTable waveforms.  
  
-- POT1 →frequency
+- POT1 → frequency
 - POT2 → waveform select
 - POT3 → output level
 - F1 → frequency CV in
@@ -59,7 +59,7 @@ Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and Ch
 Slow, evolving CV signals, offering both chaotic and stabilized output behaviors. 
 
 Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.\
-Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.\
+Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.
 
 - Pot1 → Rate / Control the frequency of random steps.    
 - Pot2 → Bias/Offset /Shifts the output up or down.
@@ -71,6 +71,7 @@ Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-center
 
  # bezier curve with spike/ jitter mode
 Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.\
+Smooth random CV source with additional spike and jitter mode.\
 Spike, jitter probability and spike length can be fine tuned in code.  I think i settled for nicely erratic not too random values in the spike mode.   
 
 - Pot1 → freq
@@ -89,7 +90,9 @@ Spike, jitter probability and spike length can be fine tuned in code.  I think i
  If nothing is patched into sample input F2 an internal sample source is used.\
  Pot1 is a bias for the internal noise.\
  In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values.\
- Pot3  is gain/level.\
+ Pot3  is gain/level.
+ 
+ Sample and hold output on F4\
  Slewed output on F3 with Pot 2 controling time constant of the slew, up to 1000 ms slew.
  
  - Pot1 → A0 noise bias
@@ -105,6 +108,12 @@ Spike, jitter probability and spike length can be fine tuned in code.  I think i
  # Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts
 This firmware combines a probabilistic Bernoulli gate with a step sequencer, providing flexible trigger manipulation and glitchy bursts for
 randomness, controlled probabilities, and rhythmic chaos.
+
+Route incoming triggers to either of the two outputs. The decision is random, with a controllable amount of randomness/ probability (pot + CV input).
+
+In Step Sequence Modes, pressing the button generates a new randomized sequence. 4-Step, 8-Step, 32-Step Sequence.
+
+With pot3 you can introduce Miss Probability and Glitch Bursts.
 
 Controls:\
 Pot 1 Probability\
