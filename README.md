@@ -24,9 +24,9 @@
  SawRevWave is still in the code if you want to return to Hagiwos original code.\
  Selectable waveforms: Sine, Triangle, Square, Saw, Random Slope, MaxTable waveforms.  
  
-- POT1 → frequency
-- POT2 → waveform select
-- POT3 → output level
+- Pot1 → frequency
+- Pot2 → waveform select
+- Pot3 → output level
 - F1 → frequency CV in
 - F2 → waveform CV in
 - F3 → output level CV in
@@ -40,9 +40,9 @@
  Added a fourth waveform: Random slope.\
  Selectable waveforms: Triangle, Square, Sine, Random Slope chosen by a push button on D4.
  
-- POT1 → LFO1 frequency
-- POT2 → LFO2 frequency
-- POT3 → LFO3 frequency
+- Pot1 → LFO1 frequency
+- Pot2 → LFO2 frequency
+- Pot3 → LFO3 frequency
 - F1 → frequency CV in (apply to all ch LFO freq)
 - F2 → LFO1 output
 - F3 → LFO2 output
