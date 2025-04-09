@@ -20,8 +20,8 @@
   
  # Mod1 LFO
  Multi waveform LFO.\
- Insted of SawRevWave a random slope is used as 5th waveform. 
- SawRevWave is still in the code if you want to return to Hagiwos original code. 
+ Instead of SawRevWave a random slope is used as 5th waveform. 
+ SawRevWave is still in the code if you want to return to Hagiwos original code.\ 
  Sine, Triangle, Square, Saw, Random Slope, MaxTable waveforms.  
  
  # 3chan LFO
