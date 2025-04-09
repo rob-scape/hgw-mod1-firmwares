@@ -151,7 +151,7 @@ This combination of probability control, step sequencing, trigger skipping, and 
 # pot1 recorder 
 
 Pot1 Recorder with Fast PWM Output (100 Hz S&H style) max recording time 7.5 sec.\
-S&H style recording and playback in order to squeeze out a useful recording time of the nano’s small SRAM.\
+S&H style recording and playback in order to squeeze out a useful recording time of the nano’s small SRAM.
 
 You can record movement of pot1 while holding down the button. Once let go it will loop the recording.\
 Pot2 is speed, from half to double speed.\
