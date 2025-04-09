@@ -85,7 +85,7 @@ Spike, jitter probability and spike length can be fine tuned in code.  I think i
 
 
  # sample and hold with slew
- Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger in.\
+ Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger input.\
  If nothing is patched into sample input F2 an internal sample source is used.\
  Pot1 is a bias for the internal noise.\
  In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values.\
@@ -107,13 +107,13 @@ This firmware combines a probabilistic Bernoulli gate with a step sequencer, pro
 randomness, controlled probabilities, and rhythmic chaos.
 
 Controls:\
-Pot 1 Probability
+Pot 1 Probability\
 Sets the probability of switching between the two outputs (F3 and F4).
 Fully counterclockwise: Always output F3.
 Fully clockwise: Always output F4.
 Intermediate positions introduce a random chance of either output based on the pot setting.
 
-Pot 2 Mode/Length
+Pot 2 Mode/Length\
 Selects between Bernoulli Mode and Step Sequence Modes:
 0-20% (CCW): Bernoulli Mode (random coin toss per trigger)
 20-40%: 4-Step Sequence
@@ -122,7 +122,7 @@ Selects between Bernoulli Mode and Step Sequence Modes:
 80-100% (CW): 32-Step Sequence
 In Step Sequence Modes, pressing the button generates a new randomized sequence.
 
-Pot 3 Miss Probability and Glitch Burst
+Pot 3 Miss Probability and Glitch Burst\
 Sets the probability of skipping triggers:
 Fully counterclockwise: No triggers are missed.
 Turn clockwise: Up to 35% of triggers are missed. Linear 0-35%.
@@ -138,11 +138,11 @@ One of the two output trigger channels, chosen based on the current probability 
 F4 Output 2
 The second output trigger channel, acting as a counterpart to F3.
 
-Button
+Button\
 Pressing the button in Sequence Mode regenerates the step sequence with a new randomized pattern.
 In Bernoulli Mode, the button has no effect.
 
-LED Indicator
+LED Indicator\
 Flashes on every valid trigger output (either F3 or F4).
 
 This combination of probability control, step sequencing, trigger skipping, and glitch bursts makes the module versatile for generative rhythms, random variations, and chaotic textures. 
