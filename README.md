@@ -58,7 +58,7 @@ Gravity Mode pulls the output slowly back to 0 over time.
 
 Slow, evolving CV signals, offering both chaotic and stabilized output behaviors. 
 
-Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.\
+Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.
 
 Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.\
 Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.
@@ -72,7 +72,8 @@ Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-center
 - F4 → Random Walk Output
 
  # bezier curve with spike/ jitter mode
-Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.\
+Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.
+
 Smooth random CV source with additional spike and jitter mode.
 
 Spike, jitter probability and spike length can be fine tuned in code.  I think i settled for nicely erratic not too random values in the spike mode.   
@@ -93,7 +94,8 @@ Spike, jitter probability and spike length can be fine tuned in code.  I think i
  If nothing is patched into sample input F2 an internal sample source is used.
  
  Pot1 is a bias for the internal noise.\
- In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values.\
+ In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values.
+ 
  Pot3  is gain/level.
  
  Sample and hold output on F4\
@@ -124,14 +126,14 @@ This combination of probability control, step sequencing, trigger skipping, and 
 
 Controls:\
 Pot 1 Probability\
-Sets the probability of switching between the two outputs (F3 and F4).
-Fully counterclockwise: Always output F3.
-Fully clockwise: Always output F4.
-Intermediate positions introduce a random chance of either output based on the pot setting.
+Sets the probability of switching between the two outputs (F3 and F4).\
+Fully counterclockwise: Always output F3.\
+Fully clockwise: Always output F4.\
+Intermediate positions introduce a random chance of either output based on the pot setting.\
 
 Pot 2 Mode/Length\
 Selects between Bernoulli Mode and Step Sequence Modes:\
-0-20% (CCW): Bernoulli Mode (random coin toss per trigger)\
+0-20% (CCW): Bernoulli Mode\
 20-40%: 4-Step Sequence\
 40-60%: 8-Step Sequence\
 60-80%: 16-Step Sequence\
