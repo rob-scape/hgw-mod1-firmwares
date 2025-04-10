@@ -54,9 +54,11 @@
  # randomwalk
 Random Walk with Gravity Mode.\
 Button toggles between classic Random Walk mode and Gravity Mode.\
-Gravity Mode pulls the output slowly back to 0 over time.\
-Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.\
+Gravity Mode pulls the output slowly back to 0 over time.
+
 Slow, evolving CV signals, offering both chaotic and stabilized output behaviors. 
+
+Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.\
 
 Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.\
 Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.
@@ -71,7 +73,8 @@ Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-center
 
  # bezier curve with spike/ jitter mode
 Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.\
-Smooth random CV source with additional spike and jitter mode.\
+Smooth random CV source with additional spike and jitter mode.
+
 Spike, jitter probability and spike length can be fine tuned in code.  I think i settled for nicely erratic not too random values in the spike mode.   
 
 - Pot1 → freq
@@ -87,7 +90,8 @@ Spike, jitter probability and spike length can be fine tuned in code.  I think i
 
  # sample and hold with slew
  Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger input.\
- If nothing is patched into sample input F2 an internal sample source is used.\
+ If nothing is patched into sample input F2 an internal sample source is used.
+ 
  Pot1 is a bias for the internal noise.\
  In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values.\
  Pot3  is gain/level.
@@ -109,7 +113,7 @@ Spike, jitter probability and spike length can be fine tuned in code.  I think i
 This firmware combines a probabilistic Bernoulli gate with a step sequencer, providing flexible trigger manipulation and glitchy bursts for
 randomness, controlled probabilities, and rhythmic chaos.
 
-Route incoming triggers to either of the two outputs. The decision is random, with a controllable amount of randomness/ probability (pot + CV input).
+Route incoming triggers to either of the two outputs. The decision is random, with a controllable amount of randomness/ probability (pot1 + CV input).
 
 In Step Sequence Modes, pressing the button generates a new randomized sequence. 4-Step, 8-Step, 32-Step Sequence.
 
@@ -126,29 +130,32 @@ Fully clockwise: Always output F4.
 Intermediate positions introduce a random chance of either output based on the pot setting.
 
 Pot 2 Mode/Length\
-Selects between Bernoulli Mode and Step Sequence Modes:
-0-20% (CCW): Bernoulli Mode (random coin toss per trigger)
-20-40%: 4-Step Sequence
-40-60%: 8-Step Sequence
-60-80%: 16-Step Sequence
-80-100% (CW): 32-Step Sequence
+Selects between Bernoulli Mode and Step Sequence Modes:\
+0-20% (CCW): Bernoulli Mode (random coin toss per trigger)\
+20-40%: 4-Step Sequence\
+40-60%: 8-Step Sequence\
+60-80%: 16-Step Sequence\
+80-100% (CW): 32-Step Sequence\
 In Step Sequence Modes, pressing the button generates a new randomized sequence.
 
 Pot 3 Miss Probability and Glitch Burst\
-Sets the probability of skipping triggers:
-Fully counterclockwise: No triggers are missed.
-Turn clockwise: Up to 35% of triggers are missed. Linear 0-35%.
+Sets the probability of skipping triggers:\
+Fully counterclockwise: No triggers are missed.\
+Turn clockwise: Up to 35% of triggers are missed. Linear 0-35%.\
 80-100% (CW): Introduces Glitch Bursts, where rapid chaotic trigger sequences are generated occasionally.
 
 Inputs and Outputs:\
 F1 Trigger Input\
-Incoming trigger signal to be processed through the Bernoulli gate or sequencer.\
+Incoming trigger signal to be processed through the Bernoulli gate or sequencer.
+
 F2 CV Input\
-Modulates the output probability in conjunction with Pot 1, allowing CV control.\
+Modulates the output probability in conjunction with Pot 1, allowing CV control.
+
 F3 Output 1\
-One of the two output trigger channels, chosen based on the current probability setting.\
+One of the two output trigger channels, chosen based on the current probability setting.
+
 F4 Output 2\
-The second output trigger channel, acting as a counterpart to F3.\
+The second output trigger channel, acting as a counterpart to F3.
 
 Button\
 Pressing the button in Sequence Mode regenerates the step sequence with a new randomized pattern.
@@ -166,8 +173,11 @@ S&H style recording and playback in order to squeeze out a useful recording time
 You can record movement of pot1 while holding down the button. Once let go it will loop the recording.
 
 Pot2 is speed, from half to double speed.\
-Pot3 is gain control.\
-Speed CV offset via F1 CV in.  Gain CV offset via F2 CV in.\
+Pot3 is gain control.
+
+Speed CV offset via F1 CV in.\  
+Gain CV offset via F2 CV in.
+
 CV out on F4. 
 
 - Pot1 → Pot to record

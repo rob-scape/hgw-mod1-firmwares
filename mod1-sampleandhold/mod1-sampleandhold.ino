@@ -57,7 +57,7 @@ void setup() {
    // TCCR1B = _BV(CS11); // Prescaler 8
 
     TCCR1A = _BV(COM1A1) | _BV(WGM10);        // Enable PWM on OC1A (D10), WGM10 for 8-bit
-TCCR1B = _BV(WGM12) | _BV(CS11);          // Fast PWM 8-bit, prescaler 8
+    TCCR1B = _BV(WGM12) | _BV(CS11);          // Fast PWM 8-bit, prescaler 8
 
 }
 
