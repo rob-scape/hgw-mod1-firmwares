@@ -129,7 +129,7 @@ Pot 1 Probability\
 Sets the probability of switching between the two outputs (F3 and F4).\
 Fully counterclockwise: Always output F3.\
 Fully clockwise: Always output F4.\
-Intermediate positions introduce a random chance of either output based on the pot setting.\
+Intermediate positions introduce a random chance of either output based on the pot setting.
 
 Pot 2 Mode/Length\
 Selects between Bernoulli Mode and Step Sequence Modes:\
