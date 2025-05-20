@@ -205,14 +205,14 @@ Musical scales are selectable via a button for the quantized output.
 
 Great for random, looped and evolving melodies and patterns.
 
-Pot1 → Main sequencing pot (random/ slip/ lock)
-Pot2 → Loop length
-Pot3 → Range/ gain
-F1 → Trigger in
-F2 → CV in offset for pot1
-F3 → Quantized CV output
-F4 → CV output
-BUTTON → change scale for quantized output
+Pot1 → Main sequencing pot (random/ slip/ lock)\
+Pot2 → Loop length\
+Pot3 → Range/ gain\
+F1 → Trigger in\
+F2 → CV in offset for pot1\
+F3 → Quantized CV output\
+F4 → CV output\
+BUTTON → change scale for quantized output\
  
  
 # mod1 general Hardware Configuration
