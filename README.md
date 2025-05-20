@@ -209,7 +209,7 @@ Pot1 → Main sequencing pot (random/ slip/ lock)\
 At noon, the sequences are random.\
 At 5 o'clock, it locks into a repeating sequence.\
 At 7 o'clock, it double locks into a repeating sequence twice as long as the 'length' setting.\
-At 3 o'clock or 9 o'clock, it slips; looping but occasionally changing notes.\
+At 3 o'clock or 9 o'clock, it slips; looping but occasionally changing notes.
 
 Pot2 → Loop length\
 Pot3 → Range/ gain\
