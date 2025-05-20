@@ -17,6 +17,7 @@
 - sample and hold with slew
 - Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts
 - pot1 recorder 
+- Turing machine/ Klee style sequencer with quantized/ unquantized CV out
   
  # Mod1 LFO
  Multi waveform LFO.\
@@ -192,7 +193,27 @@ CV out on F4.
 - LED → Visualize Output
 - Button → Recording button
 
- 
+# Turing Machine / Klee-style sequencer with quantized and unquantized CV out
+
+This firmware turns your Mod1 into a Turing Machine / Klee-style sequencer with quantized and unquantized CV out.
+
+It generates evolving or locked step sequences using a shift register, modulated by a randomness knob and/ or CV with slip, lock, and random modes.
+
+Loop length and output range are controllable via pots.
+
+Musical scales are selectable via a button for the quantized output.
+
+Great for random, looped and evolving melodies and patterns.
+
+
+Pot1 → Main sequencing pot (random/ slip/ lock)
+Pot2 → Loop length
+Pot3 → Range/ gain
+F1 → Trigger in
+F2 → CV in offset for pot1
+F3 → Quantized CV output
+F4 → CV output
+BUTTON → change scale for quantized output
  
  
  
