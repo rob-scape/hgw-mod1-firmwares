@@ -18,6 +18,7 @@
 - Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts
 - pot1 recorder 
 - Turing machine/ Klee style sequencer with quantized/ unquantized CV out
+- Lorenz System
   
  # Mod1 LFO
  Multi waveform LFO.\
@@ -218,7 +219,30 @@ F2 → CV in offset for pot1\
 F3 → Quantized CV output\
 F4 → CV output\
 BUTTON → change scale for quantized output\
- 
+
+
+# Lorenz System
+
+Lorenz Attractors are great for organic, non-repeating CV movement, chaotic but not random.  
+This system inspired the popular 'butterfly effect' metaphor, where small changes can lead 
+to dramatically different outcomes.”
+
+Pots:
+  A0 → Sigma (flow strength / controls how fast x and y try to equalize/ also mapped to stepSize\
+  A1 → Rho   (divergence / higher = stronger pull from center -> more chaos, from calm to chaos)\
+  A2 → Beta  (damping / controls how sharply z grows or decays)
+
+Input:
+F1 (A3 / D17) → Trigger input (resets attractor on rising edge)
+
+Outputs:
+  D9 (F2)  → x axis (PWM CV)\
+  D10 (F3) → y axis (PWM CV)\
+  D11 (F4) → z axis (PWM CV)
+
+Button (D4) → toggle normal and slow mode\
+LED (D3)    → Blinks in stepsize
+
  
 # mod1 general Hardware Configuration
 Potentiometers
