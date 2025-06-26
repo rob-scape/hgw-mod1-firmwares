@@ -227,21 +227,22 @@ Lorenz Attractors are great for organic, non-repeating CV movement, chaotic but 
 This system inspired the popular 'butterfly effect' metaphor, where small changes can lead 
 to dramatically different outcomes.”
 
-Pots:
+Pots:\
   A0 → Sigma (flow strength / controls how fast x and y try to equalize/ also mapped to stepSize\
   A1 → Rho   (divergence / higher = stronger pull from center -> more chaos, from calm to chaos)\
   A2 → Beta  (damping / controls how sharply z grows or decays)
 
-Input:
+Input:\
 F1 (A3 / D17) → Trigger input (resets attractor on rising edge)
 
-Outputs:
+Outputs:\
   D9 (F2)  → x axis (PWM CV)\
   D10 (F3) → y axis (PWM CV)\
   D11 (F4) → z axis (PWM CV)
 
 Button (D4) → toggle normal and slow mode\
 LED (D3)    → Blinks in stepsize
+
 
  
 # mod1 general Hardware Configuration
