@@ -1,4 +1,4 @@
-# **hgw-mod1-firmwares**
+# **Hagiwo MOD1 firmwares**
 
  Alternative firmwares for Hagiwos Mod1 Arduino based Module.
  https://note.com/solder_state/n/nc05d8e8fd311
