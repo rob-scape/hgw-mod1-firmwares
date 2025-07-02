@@ -13,7 +13,7 @@
  - Mod1 LFO
 - 3chan LFO
 - randomwalk
-- [bezier curve with spike/ jitter mode](#bezier-curve-with-spike/-jitter-mode)
+- [bezier curve with spike/ jitter mode](#bezier-curve-with-spike-jitter-mode)
 - sample and hold with slew
 - Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts
 - pot1 recorder 
@@ -73,7 +73,7 @@ Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-center
 - F3 → CV input / adds to ChaosDepth 
 - F4 → Random Walk Output
 
- # bezier curve with spike/ jitter mode
+ # bezier curve with spike jitter mode
 Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.
 
 Smooth random CV source with additional spike and jitter mode.
