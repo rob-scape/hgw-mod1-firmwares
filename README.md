@@ -13,7 +13,7 @@
  - Mod1 LFO
 - 3chan LFO
 - randomwalk
-- bezier curve with spike/ jitter mode
+- [bezier curve with spike/ jitter mode](#bezier-curve-with-spike/-jitter-mode)
 - sample and hold with slew
 - Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts
 - pot1 recorder 
