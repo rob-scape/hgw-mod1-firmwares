@@ -17,7 +17,7 @@
 - [sample and hold with slew](#sample-and-hold-with-slew) 
 - [Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts](#enhanced-bernoulli-gate-and-loop-sequencer-with-glitch-bursts) 
 - [pot1 recorder](#pot1-recorder) 
-- [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine-klee-style-sequencer-with-quantized-unquantized-cv-out) 
+- [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine-klee-style-sequencer-with-quantized-and-unquantized-cv-out) 
 - [Lorenz System](#lorenz-system) 
   
  # Mod1 LFO
