@@ -10,15 +10,15 @@
  ![mod1](https://assets.st-note.com/production/uploads/images/166671260/rectangle_large_type_2_74d04b7593d4c5aa3a08d021646da297.jpeg) 
  
   # Current firmwares
- - Mod1 LFO
-- 3chan LFO
-- randomwalk
+- [Mod1 LFO](#mod1-lfo)
+- [3chan LFO](#3chan-lfo)
+- [randomwalk](#randomwalk)
 - [bezier curve with spike/ jitter mode](#bezier-curve-with-spike-jitter-mode)
-- sample and hold with slew
-- Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts
-- pot1 recorder 
-- Turing machine/ Klee style sequencer with quantized/ unquantized CV out
-- Lorenz System
+- [sample and hold with slew](#sample-and-hold-with-slew) 
+- [Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts](#enhanced-bernoulli-gate-and-loop-sequencer-with-glitch-bursts) 
+- [pot1 recorder](#pot1-recorder) 
+- [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine-klee-style-sequencer-with-quantized-unquantized-cv-out) 
+- [Lorenz System](#lorenz System) 
   
  # Mod1 LFO
  Multi waveform LFO.\
