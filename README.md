@@ -17,8 +17,8 @@
 - [sample and hold with slew](#sample-and-hold-with-slew) 
 - [Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts](#enhanced-bernoulli-gate-and-loop-sequencer-with-glitch-bursts) 
 - [pot1 recorder](#pot1-recorder) 
-- [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine-klee-style-sequencer-with-quantized-unquantized-cv-out) 
-- [Lorenz System](#lorenz System) 
+- [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine,-klee-style-sequencer-with-quantized-unquantized-cv-out) 
+- [Lorenz System](#lorenz-system) 
   
  # Mod1 LFO
  Multi waveform LFO.\
@@ -194,7 +194,7 @@ CV out on F4.
 - LED → Visualize Output
 - Button → Recording button
 
-# Turing Machine / Klee-style sequencer with quantized and unquantized CV out
+# Turing Machine, Klee-style sequencer with quantized and unquantized CV out
 
 This firmware turns your Mod1 into a Turing Machine / Klee-style sequencer with quantized and unquantized CV out.
 
