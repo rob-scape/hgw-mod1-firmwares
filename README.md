@@ -54,13 +54,15 @@
 - EEPROM → Saves select waveform
 
  # randomwalk
-Random Walk with Gravity Mode.\
+Random Walk with Gravity Mode + Lagged Output\
 Button toggles between classic Random Walk mode and Gravity Mode.\
-Gravity Mode pulls the output slowly back to 0 over time.
+Gravity Mode pulls the output slowly back to 0 over time.\
+F2 outputs a lagged/delayed version of F4, great for ambient crossfading effects.\
+The lagged version creates beautiful dancing relationships with F4, when modulated via CV in.
 
 Slow, evolving CV signals, offering both chaotic and stabilized output behaviors. 
 
-Rate, Bias/Offset, ChaosDepth can be controlled via pots. CV ins for Rate and ChaosDepth.
+Rate, Bias/Offset, ChaosDepth can be controlled via pots. 
 
 Classic Random Walk Mode: Generates smooth, random CV output with adjustable step size.\
 Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-centering effect.
@@ -69,7 +71,8 @@ Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-center
 - Pot2 → Bias/Offset /Shifts the output up or down.
 - Pot3 → ChaosDepth (step size of walk) / Adjust the step size from subtle drifts to wild jumps.
 - Button → switch mode
-- F1 → CV input / adds to Rate
+- F1 → CV input controls Lag Amount - how closely F2 follows F4. Perfect for LFO modulation!
+- F2 → CV output/ Lagged CV out 
 - F3 → CV input / adds to ChaosDepth 
 - F4 → Random Walk Output
 
