@@ -51,6 +51,7 @@ void setup() {
   }
 
   pinMode(11, OUTPUT);       // CV output
+  pinMode(3, OUTPUT);        // LED output
   pinMode(4, INPUT_PULLUP);  // Button input (Pin 4)
   timer = micros();
   timer1 = millis();
@@ -156,5 +157,7 @@ void change_freq_error() {  // Frequency variation is obtained from the standard
 }
 
 void PWM_OUT() {  // PWM output
+  int output_value = bz_val * level / 255;
   analogWrite(11, bz_val * level / 255);
+  analogWrite(3, output_value);   // LED output - mirrors the CV intensity
 }
