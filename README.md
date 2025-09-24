@@ -263,15 +263,15 @@ LED indicates envelope 1 level.
 Outputs are fast PWM (16-bit for ENV1/ENV2, 8-bit LED).\
 Designed for Eurorack/modular trigger input and CV envelope output.
  
-- Pot1 → attack\
-- Pot2 → decay\
-- Pot3 → variation amount\
-- F1 → trigger in envelope1\
-- F2 → envelope1 out\
-- F3 → output level CV in\
-- F4 → trigger in envelope2\
-- BUTTON → trigger envelope1\
-- LED → output envelope1\
+- Pot1 → attack
+- Pot2 → decay
+- Pot3 → variation amount
+- F1 → trigger in envelope1
+- F2 → envelope1 out
+- F3 → output level CV in
+- F4 → trigger in envelope2
+- BUTTON → trigger envelope1
+- LED → output envelope1
 
 
 
