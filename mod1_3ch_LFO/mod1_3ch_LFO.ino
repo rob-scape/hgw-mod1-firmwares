@@ -7,9 +7,9 @@ POT1  A0  LFO1 frequency
 POT2  A1  LFO2 frequency
 POT3  A2  LFO3 frequency
 F1    A3  frequency CV in (apply all ch LFO freq)
-F2    A4  LFO1 output
-F3    A5  LFO2 output
-F4    D11 LFO3 output
+F2    A4  LFO1 output D9 
+F3    A5  LFO2 output D10
+F4    D11 LFO3 output D11
 BUTTON    change waveform
 LED       LFO1 output
 EEPROM    Saves select waveform

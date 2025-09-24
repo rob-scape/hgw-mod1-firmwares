@@ -19,6 +19,7 @@
 - [pot1 recorder](#pot1-recorder) 
 - [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine-klee-style-sequencer-with-quantized-and-unquantized-cv-out) 
 - [Lorenz System](#lorenz-system) 
+- [Dual AD envelope](#mod1-lfo)
   
  # Mod1 LFO
  Multi waveform LFO.\
@@ -245,6 +246,34 @@ Outputs:\
 
 Button (D4) → toggle normal and slow mode\
 LED (D3)    → Blinks in stepsize
+
+
+
+ # Dual AD envelope
+Dual AD envelope for Mod1 module designed by HAGIWO, adapted by Rob Heel.
+
+Two independent Attack–Decay envelopes with shared attack and release knobs.\
+Per-envelope random timing variation via Pot3 (A2):\
+ • Fully CCW → no variation\
+ • Fully CW → max random deviation per trigger\
+Variations are stronger at shorter attack/release settings, lighter at longer ones.
+
+Envelope 1 is also manually triggerable via push button.\
+LED indicates envelope 1 level.
+
+Outputs are fast PWM (16-bit for ENV1/ENV2, 8-bit LED).\
+Designed for Eurorack/modular trigger input and CV envelope output.
+ 
+- Pot1 → attack\
+- Pot2 → decay\
+- Pot3 → variation amount\
+- F1 → trigger in envelope1\
+- F2 → envelope1 out\
+- F3 → output level CV in\
+- F4 → trigger in envelope2\
+- BUTTON → trigger envelope1\
+- LED → output envelope1\
+
 
 
  
