@@ -19,7 +19,7 @@
 - [pot1 recorder](#pot1-recorder) 
 - [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine-klee-style-sequencer-with-quantized-and-unquantized-cv-out) 
 - [Lorenz System](#lorenz-system) 
-- [Dual AD envelope](#mod1-lfo)
+- [Dual AD envelope](#Dual-AD-envelope)
   
  # Mod1 LFO
  Multi waveform LFO.\
@@ -250,7 +250,6 @@ LED (D3)    → Blinks in stepsize
 
 
  # Dual AD envelope
-Dual AD envelope for Mod1 module designed by HAGIWO, adapted by Rob Heel.
 
 Two independent Attack–Decay envelopes with shared attack and release knobs.\
 Per-envelope random timing variation via Pot3 (A2):\
