@@ -20,6 +20,7 @@
 - [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine-klee-style-sequencer-with-quantized-and-unquantized-cv-out) 
 - [Lorenz System](#lorenz-system) 
 - [Dual AD envelope](#Dual-AD-envelope)
+- [Procedurally Generated Triple Wavetable LFO](#Procedurally-Generated-Triple-Wavetable-LFO)
   
  # Mod1 LFO
  Multi waveform LFO.\
@@ -273,6 +274,48 @@ Designed for Eurorack/modular trigger input and CV envelope output.
 - BUTTON → trigger envelope1
 - LED → output envelope1
 
+
+ # Procedurally Generated Triple Wavetable LFO
+
+ Triple wavetable / terrain LFO with CV speed modulation input and probabilistic SloMo mode.
+
+  On each button press, three independent wavetables (“terrains”) are generated.\
+  Pot C controls the number of “knots” (points) in each waveform. Individual outs on F2, F3, F4.  
+
+  Waveform generation is semi-random, following musical constraints:
+  - Starts and ends at the same value for seamless looping.
+  - Contains at least one zero crossing.
+  - Nonlinear knot spacing.
+  - After a spike, a longer rest region follows.
+  - One curved segment per waveform (Bézier)
+
+  Wavetables reading has a defined detune in speed:\
+  speed1 * 0.9 -> F2; speed2 * 1.0 -> F3; speed3 * 1.1 -> F4;
+
+  Random slow-mo events that scale with tempo - probability set via Potb.\
+  SloMo randomly and independently slows down the playback speed of each terrain waveform for a short,\
+  speed-dependent duration — creating natural, unsynced pauses or “breaths” in their motion.
+
+  CV input (0 to 5 Volts) on F1 (A3) for speed offset (adds 0–1 Hz to base speed).
+
+  Pots:\
+    A0 -> Base speed (0.01–5 Hz)\
+    A1 -> SloMo  probability\
+    A2 -> Knots (3..12)
+
+  Button:\
+    D4 -> generate new set of waveforms
+
+  LED:\
+    D3 -> blink during generation
+
+  Outputs:\
+    F2 (D9)  : Terrain 1\
+    F3 (D10) : Terrain 2\
+    F4 (D11) : Terrain 3
+
+  Inputs:\
+    F1 (A3) : CV input for speed offset (adds 0–1 Hz to base speed)
 
 
  
