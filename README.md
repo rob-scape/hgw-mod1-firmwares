@@ -318,6 +318,7 @@ Designed for Eurorack/modular trigger input and CV envelope output.
     F1 (A3) : CV input for speed offset (adds 0–1 Hz to base speed)
 
 
+
  
 # mod1 general Hardware Configuration
 Potentiometers
