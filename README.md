@@ -289,8 +289,11 @@ Designed for Eurorack/modular trigger input and CV envelope output.
   - After a spike, a longer rest region follows.
   - One curved segment per waveform (Bézier)
     
+    
 
     ![mod1-wavetable_terrain](https://github.com/user-attachments/assets/1d06856a-d64a-48b7-a007-e2a16f4279a4)
+
+
 
   Wavetables reading has a defined detune in speed:\
   speed1 * 0.9 -> F2; speed2 * 1.0 -> F3; speed3 * 1.1 -> F4;
