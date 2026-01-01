@@ -4,7 +4,7 @@
  https://note.com/solder_state/n/nc05d8e8fd311
  
  Mod1 is an Arduino Nano based eurorack module designed by Hagiwo, that can be utilized with own code.
- Here you will find some slightly changed or completely new code ideas for this module. 
+ Here you will find some slightly changed or completely new code ideas for this module.\ 
  Project by Rob Heel 2025 and ongoing.
  
  
