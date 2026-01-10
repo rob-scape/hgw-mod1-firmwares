@@ -270,8 +270,8 @@ Designed for Eurorack/modular trigger input and CV envelope output.
 - Pot3 → variation amount
 - F1 → trigger in envelope1
 - F2 → envelope1 out
-- F3 → output level CV in
-- F4 → trigger in envelope2
+- F3 → trigger in envelope2
+- F4 → envelope2 out
 - BUTTON → trigger envelope1
 - LED → output envelope1
 
