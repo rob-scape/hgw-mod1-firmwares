@@ -10,6 +10,10 @@
  
  ![mod1](https://assets.st-note.com/production/uploads/images/166671260/rectangle_large_type_2_74d04b7593d4c5aa3a08d021646da297.jpeg) 
  
+# Firmware online flasher
+I made a website, where you can flash these firmwares directly from a browser (Chrome or Edge), if you do not want to tinker with the ino files. 
+https://robertheel.com/content/mod1firmwareflasher/
+
   # Current firmwares
 - [Mod1 LFO](#mod1-lfo)
 - [3chan LFO](#3chan-lfo)
