@@ -26,7 +26,7 @@ https://robertheel.com/content/mod1firmwareflasher/
 - [pot1 recorder](#pot1-recorder) 
 - [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine-klee-style-sequencer-with-quantized-and-unquantized-cv-out) 
 - [Dual AD envelope](#dual-ad-envelope)
-- [Procedurally Generated Triple Wavetable LFO](#procedurally-generated-triple-wavetable-lfo)
+- [Procedurally Generated Triple Wavetable LFO](#procedurally-generated-triple-wavetable-lfo)\
 Chaos, Neuroscience & Complex Systems Models [Disclaimer](#chaos-neuroscience--complex-systems-models)
 
 - [Lorenz System](#lorenz-system) 
