@@ -10,11 +10,13 @@
  
  ![mod1](https://assets.st-note.com/production/uploads/images/166671260/rectangle_large_type_2_74d04b7593d4c5aa3a08d021646da297.jpeg) 
  
+
 # Firmware online flasher
 I made a website, where you can flash these firmwares directly from a browser (Chrome or Edge), if you do not want to tinker with the ino files. 
 https://robertheel.com/content/mod1firmwareflasher/
 
-  # Current firmwares
+
+# Current firmwares
 - [Mod1 LFO](#mod1-lfo)
 - [3chan LFO](#3chan-lfo)
 - [randomwalk](#randomwalk)
@@ -23,11 +25,18 @@ https://robertheel.com/content/mod1firmwareflasher/
 - [Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts](#enhanced-bernoulli-gate-and-loop-sequencer-with-glitch-bursts) 
 - [pot1 recorder](#pot1-recorder) 
 - [Turing machine/ Klee style sequencer with quantized/ unquantized CV out](#turing-machine-klee-style-sequencer-with-quantized-and-unquantized-cv-out) 
+- [Dual AD envelope](#dual-ad-envelope)
+- [Procedurally Generated Triple Wavetable LFO](#procedurally-generated-triple-wavetable-lfo)
+Chaos, Neuroscience & Complex Systems Models [Disclaimer](#chaos-neuroscience--complex-systems-models)
+
 - [Lorenz System](#lorenz-system) 
-- [Dual AD envelope](#Dual-AD-envelope)
-- [Procedurally Generated Triple Wavetable LFO](#Procedurally-Generated-Triple-Wavetable-LFO)
-  
- # Mod1 LFO
+- [Hindmarsh-Rose Model](#hindmarsh-rose-model---neuron-bursting-lfo)
+- [Kuramoto Model - Coupled Oscillator Synchronization LFO](#kuramoto-model---coupled-oscillator-synchronization-lfo)
+- [Izhikevich Neuron Model - Neuron Spiking LFO](#izhikevich-neuron-model---neuron-spiking-lfo)
+
+ 
+
+# Mod1 LFO
  Multi waveform LFO.\
  Instead of SawRevWave a random slope is used as 5th waveform. 
  SawRevWave is still in the code if you want to return to Hagiwos original code.\
@@ -43,8 +52,9 @@ https://robertheel.com/content/mod1firmwareflasher/
 - BUTTON → change frequency range
 - LED → output
 - EEPROM → Saves the frequency range when the button is pressed
- 
- # 3chan LFO
+<sub>[Back to firmware list](#current-firmwares)</sub>
+
+# 3chan LFO
  Three channel LFO.\
  Added a fourth waveform: Random slope.\
  Selectable waveforms: Triangle, Square, Sine, Random Slope chosen by a push button on D4.
@@ -59,8 +69,9 @@ https://robertheel.com/content/mod1firmwareflasher/
 - BUTTON → change waveform
 - LED → LFO1 output
 - EEPROM → Saves select waveform
+<sub>[Back to firmware list](#current-firmwares)</sub>
 
- # randomwalk
+# randomwalk
 Random Walk with Gravity Mode + Lagged Output\
 Button toggles between classic Random Walk mode and Gravity Mode.\
 Gravity Mode pulls the output slowly back to 0 over time.\
@@ -82,8 +93,9 @@ Gravity Mode: Adds a gradual pull back to zero, creating a drifting, self-center
 - F2 → CV output/ Lagged CV out 
 - F3 → CV input / adds to ChaosDepth 
 - F4 → Random Walk Output
+<sub>[Back to firmware list](#current-firmwares)</sub>
 
- # bezier curve with spike jitter mode
+# bezier curve with spike jitter mode
 Bezier curve random CV generator by Hagiwo adapted for Mod1 and added a second Spike/Jitter Bezier mode, accesible via button.
 
 Smooth random CV source with additional spike and jitter mode.
@@ -99,16 +111,16 @@ Spike, jitter probability and spike length can be fine tuned in code.  I think i
 - F4 → output
 - LED → Pin 3
 - Button → switch modes
+<sub>[Back to firmware list](#current-firmwares)</sub>
 
-
- # sample and hold with slew
+# sample and hold with slew
  Classical sample and hold function. Sample and hold output on F4, triggered by button or F1 trigger input.\
  If nothing is patched into sample input F2 an internal sample source is used.
  
  Pot1 is a bias for the internal noise.\
  In the middle position truly random, fully clockwise shifts towards higher values, fully counter clockwise shifts towards lower values.
  
- Pot3  is gain/level.
+ Pot3 is gain/ level.
  
  Sample and hold output on F4\
  Slewed output on F3 with Pot 2 controling time constant of the slew, up to 1000 ms slew.
@@ -122,8 +134,9 @@ Spike, jitter probability and spike length can be fine tuned in code.  I think i
 -  F4 → D11 sample and hold output
 -  LED → Pin 3
 -  Button → Pin 4 trigger
+<sub>[Back to firmware list](#current-firmwares)</sub>
  
- # Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts
+# Enhanced Bernoulli Gate and Loop Sequencer with glitch bursts
 This firmware combines a probabilistic Bernoulli gate with a step sequencer, providing flexible trigger manipulation and glitchy bursts for
 randomness, controlled probabilities, and rhythmic chaos.
 
@@ -177,19 +190,19 @@ In Bernoulli Mode, the button has no effect.
 
 LED Indicator\
 Flashes on every valid trigger output (either F3 or F4).
+<sub>[Back to firmware list](#current-firmwares)</sub>
 
   
 # pot1 recorder 
 
-Pot1 Recorder with Fast PWM Output (100 Hz S&H style) max recording time 7.5 sec.\
-S&H style recording and playback in order to squeeze out a useful recording time of the nano’s small SRAM.
+Pot1 Recorder with Fast PWM Output (100 Hz S&H style) max recording time 7.5 sec. S&H style recording and playback in order to squeeze out a useful recording time of the nano’s small SRAM.
 
 You can record movement of pot1 while holding down the button. Once let go it will loop the recording.
 
 Pot2 is speed, from half to double speed.\
 Pot3 is gain control.
 
-Speed CV offset via F1 CV in.\  
+Speed CV offset via F1 CV in.\
 Gain CV offset via F2 CV in.
 
 CV out on F4. 
@@ -203,16 +216,18 @@ CV out on F4.
 - F4 → Output
 - LED → Visualize Output
 - Button → Recording button
+<sub>[Back to firmware list](#current-firmwares)</sub>
 
 # Turing Machine Klee-style sequencer with quantized and unquantized CV out
 
 This firmware turns your Mod1 into a Turing Machine / Klee-style sequencer with quantized and unquantized CV out.
 
+
 It generates evolving or locked step sequences using a shift register, modulated by a randomness knob and/ or CV with slip, lock, and random modes.
 
 Loop length and output range are controllable via pots.
 
-Musical scales are selectable via a button for the quantized output.
+Musical scales are selectable via a button for the quantized output; Major, Minor, Phrygian.
 
 Great for random, looped and evolving melodies and patterns.
 
@@ -229,33 +244,11 @@ F2 → CV in offset for pot1\
 F3 → Quantized CV output\
 F4 → CV output\
 BUTTON → change scale for quantized output\
-
-
-# Lorenz System
-
-Lorenz Attractors are great for organic, non-repeating CV movement, chaotic but not random.  
-This system inspired the popular 'butterfly effect' metaphor, where small changes can lead 
-to dramatically different outcomes.”
-
-Pots:\
-  A0 → Sigma (flow strength / controls how fast x and y try to equalize/ also mapped to stepSize\
-  A1 → Rho   (divergence / higher = stronger pull from center -> more chaos, from calm to chaos)\
-  A2 → Beta  (damping / controls how sharply z grows or decays)
-
-Input:\
-F1 (A3 / D17) → Trigger input (resets attractor on rising edge)
-
-Outputs:\
-  D9 (F2)  → x axis (PWM CV)\
-  D10 (F3) → y axis (PWM CV)\
-  D11 (F4) → z axis (PWM CV)
-
-Button (D4) → toggle normal and slow mode\
-LED (D3)    → Blinks in stepsize
+<sub>[Back to firmware list](#current-firmwares)</sub>
 
 
 
- # Dual AD envelope
+# Dual AD envelope
 
 Two independent Attack–Decay envelopes with shared attack and release knobs.\
 Per-envelope random timing variation via Pot3 (A2):\
@@ -278,16 +271,17 @@ Designed for Eurorack/modular trigger input and CV envelope output.
 - F4 → envelope2 out
 - BUTTON → trigger envelope1
 - LED → output envelope1
+<sub>[Back to firmware list](#current-firmwares)</sub>
 
 
- # Procedurally Generated Triple Wavetable LFO
+# Procedurally Generated Triple Wavetable LFO
 
- Triple wavetable / terrain LFO with CV speed modulation input and probabilistic SloMo mode.
+Triple wavetable / terrain LFO with CV speed modulation input and probabilistic SloMo mode.
 
-  On each button press, three independent wavetables (“terrains”) are generated.\
-  Pot C controls the number of “knots” (points) in each waveform. Individual outs on F2, F3, F4.  
+On each button press, three independent wavetables (“terrains”) are generated.\
+Pot C controls the number of “knots” (points) in each waveform. Individual outs on F2, F3, F4.  
 
-  Waveform generation is semi-random, following musical constraints:
+Waveform generation is semi-random, following musical constraints:
   - Starts and ends at the same value for seamless looping.
   - Contains at least one zero crossing.
   - Nonlinear knot spacing.
@@ -304,8 +298,9 @@ Designed for Eurorack/modular trigger input and CV envelope output.
   speed1 * 0.9 -> F2; speed2 * 1.0 -> F3; speed3 * 1.1 -> F4;
 
   Random slow-mo events that scale with tempo - probability set via Potb.\
-  SloMo randomly and independently slows down the playback speed of each terrain waveform for a short,\
-  speed-dependent duration — creating natural, unsynced pauses or “breaths” in their motion.
+  SloMo randomly and independently slows down the playback speed of each terrain waveform for a short, speed-dependent duration — creating natural, unsynced pauses or “breaths” in their motion.
+
+  This is my fav LFO for soundscape compositions currently, the three outputs align, drift apart and partially resync.
 
   CV input (0 to 5 Volts) on F1 (A3) for speed offset (adds 0–1 Hz to base speed).
 
@@ -328,9 +323,154 @@ Designed for Eurorack/modular trigger input and CV envelope output.
   Inputs:\
     F1 (A3) : CV input for speed offset (adds 0–1 Hz to base speed)
 
+<sub>[Back to firmware list](#current-firmwares)</sub>
+
+---
+# Chaos, Neuroscience & Complex Systems Models
+
+> Some of these models are very musical and great to perform, interact and patch with. Especially Lorenz system does work really well as organic evolving modulation source.
+>
+>Other firmwares in this section grew probably more of curiosity for unusual modulation models and approaches. In some cases I am still searching for a musical context with specific firmwares. 
+>
+>But i share them here, as personal memorandum and you might built something cool with it or expand on it. There is definitely interesting bits and approaches in this models. 
+---
+
+# Lorenz System
+
+[Lorenz Attractors](https://de.wikipedia.org/wiki/Lorenz-Attraktor) are great for organic, non-repeating CV movement, chaotic but not random. This system inspired the popular 'butterfly effect' metaphor, where small changes can lead to dramatically different outcomes.
+This chaos theory based LFO is fantastic for organic non repeating movement. With the three outputs it is very easy to create patches that drift and breathe. 
 
 
+ ![lorenz-butterfly-effect](https://upload.wikimedia.org/wikipedia/commons/5/5b/Lorenz_attractor_yb.svg) 
+
+Pots:\
+  A0 → Sigma (flow strength / controls how fast x and y try to equalize/ also mapped to stepSize\
+  A1 → Rho   (divergence / higher = stronger pull from center -> more chaos, from calm to chaos)\
+  A2 → Beta  (damping / controls how sharply z grows or decays)
+
+Input:\
+F1 (A3 / D17) → Trigger input (resets attractor on rising edge)
+
+Outputs:\
+  D9 (F2)  → x axis (PWM CV)\
+  D10 (F3) → y axis (PWM CV)\
+  D11 (F4) → z axis (PWM CV)
+
+Button (D4) → toggle normal and slow mode\
+LED (D3)    → Blinks in stepsize
+
+<sub>[Back to firmware list](#current-firmwares)</sub>
+
+
+# Hindmarsh-Rose Model - Neuron Bursting LFO
+A 3D neuron model that produces periodic repetitive patterns and bursting based on the [Hindmarsh-Rose Model](https://en.wikipedia.org/wiki/Hindmarsh–Rose_model). Can be tricky because small changes of variables (pots) can lead to unexpected results, while in other settings nothing much happens.
+
+If nothing is happening, nudge pot 3 (I) upward slowly — transitions between regimes can be abrupt.
+
+The model has three variables:
+- x (membrane potential): Fast spiking variable
+- y (recovery): Fast inactivation
+- z (adaptation): Slow variable that modulates bursting
+
+ ![Hindmarsh-Rose-Model](https://upload.wikimedia.org/wikipedia/commons/1/1b/Simulation_of_hrose_neuron.png) 
+
+This creates behaviors like: periodic repetitive patterns, spiking and bursting and silence at times.
+x and y (F2+F3) outputs do interact quite nicely and have a natural rhythmic relationship with each other. z (F4) is better suited as a slow macro-modulator, it can be glacial in timing and movement. 
+
+It can take time to move through its phases, long listening can be rewarding. 
+
+## Basically you might encounter three phases 
+#### "Nothing much happens" 
+The system is sitting at a stable fixed point. Below a threshold of I, x just settles and z slowly climbs to meet it. No oscillation. Changing pot3 (I) or feeding control voltage into F1 should start activity
+
+#### "Repetitive pattern"
+You've crossed into periodic bursting. Repeating patterns can persist at fixed parameters, or gradually disappear as the slow z variable pulls the system back toward silence. When I is being modulated via CV you can deliberatly push and pull the system.
+
+#### "Dies down" 
+This is the z (slow adaptation) variable. Eventually it suppresses the oscillation back toward quiescence. It's a slow envelope that the model generates intrinsically. 
+
+
+
+Pots:
+  A0 → r (adaptation speed / 0.001-0.01: how quickly the slow variable adapts)
+  A1 → s (adaptation strength / 1-6: how strongly adaptation affects spiking)
+  A2 → I (input current / 1-4: drives activity from calm to bursting)
+
+Input:
+  F1 (A3 / D17) → CV input - modulates input current
+
+Outputs:
+  D9 (F2)  → x (membrane potential - main chaotic spiky output)
+  D10 (F3) → y (fast recovery - complementary rhythmic output)
+  D11 (F4) → z (slow adaptation - long evolving wave)
+
+Button (D4) → toggle normal and slow mode
+LED (D3)    → Blinks on spike peaks
+
+<sub>[Back to firmware list](#current-firmwares)</sub>
+
+
+# Kuramoto Model - Coupled Oscillator Synchronization LFO
+A model of coupled phase oscillators that exhibits spontaneous synchronization.
+Three oscillators with different natural frequencies try to sync - sometimes they lock,sometimes they drift apart, creating organic evolving patterns.
+
+ [Kuramoto Model](https://en.wikipedia.org/wiki/Kuramoto_model) is the model behind firefly synchronization, heart pacemaker cells, and neural rhythms.
+
+Three oscillators with phases θ1, θ2, θ3:
+- Each wants to oscillate at its own natural frequency
+- Coupling pulls them toward synchronization
+- The battle between individuality and conformity creates emergent behavior
+
+Pots:
+  A0 → Base frequency (0.5-5 Hz: overall speed of oscillations)
+  A1 → Frequency spread (0-5: how different the natural frequencies are)
+  A2 → K (coupling strength / 0-3: LOW=locked sync, MID=partial sync, HIGH=independent)
+
+Input:
+  F1 (A3 / D17) → CV input (modulates coupling strength K, -1 to +2 offset to Pot C)
+
+Outputs:
+  D9 (F2)  → Oscillator 1 (sine wave from phase θ1)
+  D10 (F3) → Oscillator 2 (sine wave from phase θ2)
+  D11 (F4) → Oscillator 3 (sine wave from phase θ3)
+
+Button (D4) → Toggle between sine and square wave outputs
+LED (D3)    → Blinks when oscillators are synchronized (phase coherence indicator)
+
+<sub>[Back to firmware list](#current-firmwares)</sub>
+
+# Izhikevich Neuron Model - Neuron Spiking LFO
+A computationally efficient model that reproduces 20+ different neuron firing patterns.
+
+The model has two variables:
+- v (membrane potential): Fast spiking variable
+- u (recovery variable): Slow adaptation variable
+
+Four parameters (a, b, c, d) control the neuron's "personality":
+- a: recovery time scale (how fast u recovers)
+- b: sensitivity of u to v (coupling strength)
+- c: after-spike reset value for v
+- d: after-spike reset increment for u
+
+Pots:
+  A0 → a (recovery speed / 0.01-0.2: faster recovery = different spike patterns)
+  A1 → b (sensitivity / 0.1-0.3: changes spike clustering behavior)
+  A2 → I (input current / 0-15: drives activity from rest to chaos)
+
+Input:
+  F1 (A3 / D17) → CV input (modulates input current I, -5 to +10 offset to Pot C)
+
+Outputs:
+  D9 (F2)  → v (membrane potential - main spiky chaotic output)
+  D10 (F3) → u (recovery variable - slower complementary wave)
+  D11 (F4) → spike gate (HIGH during spike, LOW otherwise). Biological timing rather than metronomic timing. Irregular but not random.
+
+Button (D4) → Cycle through neuron types (Regular/Chattering/Bursting/Fast Spiking)
+LED (D3)    → Shows neuron type: 1 blink=Regular, 2=Chattering, 3=Bursting, 4=Fast
+
+<sub>[Back to firmware list](#current-firmwares)</sub>
  
+---
 # mod1 general Hardware Configuration
 Potentiometers
 - Pot1  → A0
