@@ -392,19 +392,19 @@ This is the z (slow adaptation) variable. Eventually it suppresses the oscillati
 
 
 Pots:
-  A0 → r (adaptation speed / 0.001-0.01: how quickly the slow variable adapts)
-  A1 → s (adaptation strength / 1-6: how strongly adaptation affects spiking)
+  A0 → r (adaptation speed / 0.001-0.01: how quickly the slow variable adapts)\
+  A1 → s (adaptation strength / 1-6: how strongly adaptation affects spiking)\
   A2 → I (input current / 1-4: drives activity from calm to bursting)
 
 Input:
   F1 (A3 / D17) → CV input - modulates input current
 
 Outputs:
-  D9 (F2)  → x (membrane potential - main chaotic spiky output)
-  D10 (F3) → y (fast recovery - complementary rhythmic output)
+  D9 (F2)  → x (membrane potential - main chaotic spiky output)\
+  D10 (F3) → y (fast recovery - complementary rhythmic output)\
   D11 (F4) → z (slow adaptation - long evolving wave)
 
-Button (D4) → toggle normal and slow mode
+Button (D4) → toggle normal and slow mode\
 LED (D3)    → Blinks on spike peaks
 
 <sub>[Back to firmware list](#current-firmwares)</sub>
@@ -422,19 +422,19 @@ Three oscillators with phases θ1, θ2, θ3:
 - The battle between individuality and conformity creates emergent behavior
 
 Pots:
-  A0 → Base frequency (0.5-5 Hz: overall speed of oscillations)
-  A1 → Frequency spread (0-5: how different the natural frequencies are)
+  A0 → Base frequency (0.5-5 Hz: overall speed of oscillations)\
+  A1 → Frequency spread (0-5: how different the natural frequencies are)\
   A2 → K (coupling strength / 0-3: LOW=locked sync, MID=partial sync, HIGH=independent)
 
 Input:
   F1 (A3 / D17) → CV input (modulates coupling strength K, -1 to +2 offset to Pot C)
 
 Outputs:
-  D9 (F2)  → Oscillator 1 (sine wave from phase θ1)
-  D10 (F3) → Oscillator 2 (sine wave from phase θ2)
+  D9 (F2)  → Oscillator 1 (sine wave from phase θ1)\
+  D10 (F3) → Oscillator 2 (sine wave from phase θ2)\
   D11 (F4) → Oscillator 3 (sine wave from phase θ3)
 
-Button (D4) → Toggle between sine and square wave outputs
+Button (D4) → Toggle between sine and square wave outputs\
 LED (D3)    → Blinks when oscillators are synchronized (phase coherence indicator)
 
 <sub>[Back to firmware list](#current-firmwares)</sub>
@@ -453,19 +453,19 @@ Four parameters (a, b, c, d) control the neuron's "personality":
 - d: after-spike reset increment for u
 
 Pots:
-  A0 → a (recovery speed / 0.01-0.2: faster recovery = different spike patterns)
-  A1 → b (sensitivity / 0.1-0.3: changes spike clustering behavior)
+  A0 → a (recovery speed / 0.01-0.2: faster recovery = different spike patterns)\
+  A1 → b (sensitivity / 0.1-0.3: changes spike clustering behavior)\
   A2 → I (input current / 0-15: drives activity from rest to chaos)
 
 Input:
   F1 (A3 / D17) → CV input (modulates input current I, -5 to +10 offset to Pot C)
 
 Outputs:
-  D9 (F2)  → v (membrane potential - main spiky chaotic output)
-  D10 (F3) → u (recovery variable - slower complementary wave)
+  D9 (F2)  → v (membrane potential - main spiky chaotic output)\
+  D10 (F3) → u (recovery variable - slower complementary wave)\
   D11 (F4) → spike gate (HIGH during spike, LOW otherwise). Biological timing rather than metronomic timing. Irregular but not random.
 
-Button (D4) → Cycle through neuron types (Regular/Chattering/Bursting/Fast Spiking)
+Button (D4) → Cycle through neuron types (Regular/Chattering/Bursting/Fast Spiking)\
 LED (D3)    → Shows neuron type: 1 blink=Regular, 2=Chattering, 3=Bursting, 4=Fast
 
 <sub>[Back to firmware list](#current-firmwares)</sub>
